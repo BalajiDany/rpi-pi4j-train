@@ -5,22 +5,11 @@
 	<artifactId>rpi-pi4j-train</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<repositories>
-		<repository>
-			<id>oss-snapshots-repo</id>
-			<name>Sonatype OSS Maven Repository</name>
-			<url>https://oss.sonatype.org/content/groups/public</url>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</snapshots>
-		</repository>
-	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>com.pi4j</groupId>
 			<artifactId>pi4j-core</artifactId>
-			<version>1.2-SNAPSHOT</version>
+			<version>1.1</version>
 		</dependency>
 	</dependencies>
 	<build>
