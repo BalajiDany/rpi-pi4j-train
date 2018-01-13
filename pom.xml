@@ -5,17 +5,28 @@
 	<artifactId>rpi-pi4j-train</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
+	<repositories>
+		<repository>
+			<id>oss-snapshots-repo</id>
+			<name>Sonatype OSS Maven Repository</name>
+			<url>https://oss.sonatype.org/content/groups/public</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>com.pi4j</groupId>
 			<artifactId>pi4j-core</artifactId>
-			<version>1.1</version>
+			<version>1.2-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
 			<plugin>
-				<!-- Build an executable JAR -->
+				<!-- EXECUTABLE JAR -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>3.0.2</version>
@@ -38,30 +49,6 @@
 					<source>1.6</source>
 					<target>1.6</target>
 				</configuration>
-			</plugin>
-
-			<!-- INCLUDE SOURCE JAR -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-			</plugin>
-
-			<!-- INCLUDE JAVADOC JAR -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-			</plugin>
-
-			<!-- GENERATE LICENSE HEADERS IN SOURCE FILES -->
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>license-maven-plugin</artifactId>
-			</plugin>
-
-			<!-- DOWNLOAD LICENSE, README & NOTICE ARTIFACTS -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
